@@ -1,0 +1,22 @@
+# robots.txt pour App_Restaurant - Logiciel de Gestion Restaurant Congo
+# Mots-clés: logiciel gestion restaurant, commande en ligne restaurant, caisse restaurant Congo
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://app-restaurant.com/sitemap.xml
+
+# Crawl-delay optimisé pour un meilleur indexation
+Crawl-delay: 5
+
+# Disallow admin or private pages
+# Disallow: /admin/
+# Disallow: /api/
+
+# Allow important pages for SEO
+Allow: /about
+Allow: /documentation
+Allow: /help-center
+Allow: /our-mission
+Allow: /why-us
