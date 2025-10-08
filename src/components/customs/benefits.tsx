@@ -6,33 +6,33 @@ export const Benefits = () => {
   const benefits = [
     {
       icon: TrendingUp,
-      title: "Augmentez vos ventes de 35%",
-      description: "Menu digital avec QR code, commande en ligne 24/7 (sur place/à emporter/livraison). Statistiques des plats populaires pour optimiser votre carte. Logiciel adapté aux restaurants congolais.",
-      stats: "+30% à +40% de croissance moyenne",
+      title: "Explosez Votre Chiffre d'Affaires",
+      description: "Vos clients commandent 24/7, même quand vous dormez. Menu QR code qui booste les ventes. Identifiez vos best-sellers et maximisez vos profits. Résultat : +35% de CA en moyenne.",
+      stats: "Jusqu'à +40% de ventes supplémentaires",
       color: "text-primary",
       bgColor: "bg-primary/10",
     },
     {
       icon: Clock,
-      title: "Gagnez 3h par jour",
-      description: "Caisse enregistreuse automatique, gestion des commandes simplifiée, tickets générés automatiquement. Interface intuitive pour votre équipe de restaurant ou maquis.",
-      stats: "2 à 3 heures économisées par jour",
+      title: "Libérez Votre Temps Précieux",
+      description: "Fini les calculs manuels, les tickets à la main, les erreurs de caisse. Tout est automatisé. Concentrez-vous sur ce qui compte : vos clients et votre croissance.",
+      stats: "3 heures redonnées chaque jour",
       color: "text-secondary",
       bgColor: "bg-secondary/10",
     },
     {
       icon: ShieldCheck,
-      title: "Réduisez les erreurs",
-      description: "Synchronisation cuisine-salle en temps réel, calculs automatiques (prix, TVA, monnaie), stock mis à jour automatiquement.",
-      stats: "-90% d'erreurs de commande et d'écarts de caisse",
+      title: "Zéro Erreur, Zéro Perte",
+      description: "Plus de commandes mal prises. Plus d'erreurs de calcul. Plus de vols discrets. Chaque franc est traçé. Votre marge est protégée.",
+      stats: "90% d'erreurs en moins = plus de profit",
       color: "text-accent",
       bgColor: "bg-accent/10",
     },
     {
       icon: BarChart3,
-      title: "Pilotez votre activité",
-      description: "Tableau de bord complet et interactif, rapports de ventes détaillés, suivi du personnel et des performances. Décisions basées sur les données.",
-      stats: "Visibilité en temps réel",
+      title: "Prenez le Contrôle Total",
+      description: "Sachez exactement ce qui se passe dans votre restaurant, même à distance. Chiffres clairs, décisions rapides, croissance maîtrisée. Vous êtes le patron, vraiment.",
+      stats: "Visibilité complète 24/7",
       color: "text-primary",
       bgColor: "bg-primary/10",
     },
@@ -48,13 +48,13 @@ export const Benefits = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            Avantages du Logiciel de Gestion Restaurant{" "}
+            Ce Que App_Restaurant Va{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              App_Restaurant
+              Changer Pour Vous
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Logiciel complet pour augmenter vos ventes, optimiser la gestion et digitaliser votre restaurant au Congo
+            Des résultats concrets et mesurables dès les premières semaines. Rejoignez les restaurateurs qui ont transformé leur business.
           </p>
         </motion.div>
 

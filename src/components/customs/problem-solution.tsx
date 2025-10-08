@@ -16,33 +16,33 @@ import {
 export const ProblemSolution = () => {
   const comparisons = [
     {
-      problem: "Commandes mal prises ou perdues",
+      problem: "Commandes oubliées, clients furieux qui partent",
       problemIcon: ClipboardX,
-      solution: "Commandes 100% exactes et traçables",
+      solution: "Chaque commande enregistrée et traçée automatiquement",
       solutionIcon: ClipboardCheck,
     },
     {
-      problem: "Service lent et clients mécontents",
+      problem: "Files d'attente interminables, clients impatients",
       problemIcon: Frown,
-      solution: "Service rapide et efficace",
+      solution: "Commande en ligne = service 3x plus rapide",
       solutionIcon: Smile,
     },
     {
-      problem: "Erreurs de facturation fréquentes",
+      problem: "Erreurs de calcul, disputes avec les clients",
       problemIcon: Calculator,
-      solution: "Facturation automatique et sans erreur",
+      solution: "Calculs parfaits à chaque fois, zéro dispute",
       solutionIcon: Receipt,
     },
     {
-      problem: "Aucune visibilité sur les ventes",
+      problem: "Vous ne savez pas si vous gagnez ou perdez de l'argent",
       problemIcon: EyeOff,
-      solution: "Tableau de bord en temps réel",
+      solution: "Voyez vos profits en direct, prenez les bonnes décisions",
       solutionIcon: BarChart3,
     },
     {
-      problem: "Gestion des stocks chaotique",
+      problem: "Ruptures de stock fréquentes, clients déçus",
       problemIcon: PackageX,
-      solution: "Gestion automatisée des stocks",
+      solution: "Alertes automatiques, jamais à court d'ingrédients",
       solutionIcon: PackageCheck,
     },
   ];
@@ -57,11 +57,11 @@ export const ProblemSolution = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            Pourquoi un Logiciel de Gestion Restaurant est{" "}
-            <span className="text-primary">Indispensable</span> ?
+            Vous Reconnaissez{" "}
+            <span className="text-primary">Ces Problèmes</span> ?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Sans logiciel de gestion, les restaurants perdent du temps, de l&apos;argent et des clients. Découvrez la différence avec App_Restaurant.
+            Chaque jour sans logiciel, c'est de l'argent perdu, des clients insatisfaits et du stress inutile. Il est temps de changer.
           </p>
         </motion.div>
 
@@ -78,7 +78,7 @@ export const ProblemSolution = () => {
               <div className="w-12 h-12 rounded-full bg-destructive/10 flex items-center justify-center">
                 <ClipboardX className="w-6 h-6 text-destructive" />
               </div>
-              <h3 className="text-2xl font-bold">Sans Logiciel de Gestion</h3>
+              <h3 className="text-2xl font-bold text-destructive">Votre Quotidien Aujourd'hui</h3>
             </div>
             {comparisons.map((item, index) => {
               const ProblemIcon = item.problemIcon;
@@ -112,7 +112,7 @@ export const ProblemSolution = () => {
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                 <PackageCheck className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold">Avec Logiciel App_Restaurant</h3>
+              <h3 className="text-2xl font-bold text-primary">Votre Quotidien Avec App_Restaurant</h3>
             </div>
             {comparisons.map((item, index) => {
               const SolutionIcon = item.solutionIcon;

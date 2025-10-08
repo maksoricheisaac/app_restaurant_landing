@@ -9,31 +9,31 @@ export const Testimonials = () => {
 
   const testimonials = [
     {
-      name: "Jean-Pierre Makolo",
-      role: "Propriétaire",
-      restaurant: "Chez JP - Kinshasa",
+      name: "Propriétaire de Restaurant",
+      role: "Brazzaville",
+      restaurant: "Secteur Restauration",
       image: "👨🏿‍💼",
       rating: 5,
       comment:
-        "App_Restaurant a transformé mon restaurant. Les commandes sont devenues fluides, plus d'erreurs, et mes ventes ont augmenté de 40% en 3 mois. Mon équipe adore l'interface !",
+        "C'est une superbe idée ! On digitalise les restaurants comme en Occident. Avec la commande en ligne et le menu QR code, on peut vraiment moderniser notre façon de travailler et attirer plus de clients. C'est exactement ce dont le Congo a besoin.",
     },
     {
-      name: "Marie Nsimba",
-      role: "Gérante",
-      restaurant: "La Tropicale - Pointe-Noire",
+      name: "Gérant de Restaurant",
+      role: "Brazzaville",
+      restaurant: "Secteur Hôtellerie-Restauration",
       image: "👩🏿‍💼",
       rating: 5,
       comment:
-        "Enfin une solution adaptée au Congo ! La mise en place a été rapide et l'équipe de support est toujours disponible. Je recommande à 100%.",
+        "C'est une bonne idée pour la pub et l'image du resto. Avoir un site web professionnel avec commande en ligne, ça donne confiance aux clients. Ça montre qu'on est moderne et sérieux. Les jeunes clients adorent commander en ligne.",
     },
     {
-      name: "Patrick Mwamba",
-      role: "Chef & Propriétaire",
-      restaurant: "Le Gourmet - Brazzaville",
-      image: "👨🏿‍🍳",
+      name: "Community Manager",
+      role: "Brazzaville",
+      restaurant: "Marketing Digital",
+      image: "👨🏿‍💻",
       rating: 5,
       comment:
-        "Le tableau de bord me permet de tout contrôler en temps réel, même quand je ne suis pas sur place. Un vrai game-changer pour mon business !",
+        "C'est excellent pour l'image de marque ! Un restaurant avec commande en ligne et menu digital, c'est plus facile à promouvoir sur les réseaux sociaux. Les clients peuvent partager, commander directement. C'est un vrai plus pour la visibilité.",
     },
   ];
 
@@ -55,10 +55,13 @@ export const Testimonials = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            Ils nous font déjà confiance
+            Ils Ont Transformé Leur Restaurant,{" "}
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
+              À Votre Tour
+            </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Découvrez ce que nos restaurateurs partenaires disent d&apos;App_Restaurant
+            Des restaurateurs comme vous qui ont fait le choix de la digitalisation et ne regrettent rien
           </p>
         </motion.div>
 

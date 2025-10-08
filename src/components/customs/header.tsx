@@ -9,6 +9,7 @@ import Image from "next/image";
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,6 +26,39 @@ export const Header = () => {
     { name: "Témoignages", href: "#testimonials" },
     { name: "Contact", href: "#contact" },
   ];
+
+  // Détection de la section active
+  useEffect(() => {
+    const sections = navLinks.map(link => link.href.substring(1));
+    
+    const observerOptions = {
+      root: null,
+      rootMargin: "-20% 0px -70% 0px",
+      threshold: 0
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    sections.forEach((section) => {
+      const element = document.getElementById(section);
+      if (element) observer.observe(element);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        const element = document.getElementById(section);
+        if (element) observer.unobserve(element);
+      });
+    };
+  }, [navLinks]);
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -72,7 +106,11 @@ export const Header = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * index }}
                 onClick={() => scrollToSection(link.href)}
-                className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors rounded-md hover:bg-muted"
+                className={`px-4 py-2 text-sm font-medium transition-all rounded-md ${
+                  activeSection === link.href.substring(1)
+                    ? "text-primary bg-primary/10 font-bold"
+                    : "text-foreground hover:text-primary hover:bg-muted"
+                }`}
               >
                 {link.name}
               </motion.button>
@@ -125,7 +163,11 @@ export const Header = () => {
                   key={link.name}
                   href={link.href}
                   onClick={() => scrollToSection(link.href)}
-                  className="px-4 py-3 text-left text-sm font-medium text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors"
+                  className={`px-4 py-3 text-left text-sm font-medium rounded-md transition-all ${
+                    activeSection === link.href.substring(1)
+                      ? "text-primary bg-primary/10 font-bold border-l-4 border-primary"
+                      : "text-foreground hover:text-primary hover:bg-muted"
+                  }`}
                 >
                   {link.name}
                 </Link>
@@ -135,7 +177,7 @@ export const Header = () => {
                 className="w-full"
                 onClick={() => scrollToSection("#contact")}
               >
-                Demander une Démo
+                Démarrer Gratuitement
               </Button>
             </nav>
           </motion.div>

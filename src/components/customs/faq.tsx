@@ -10,44 +10,44 @@ import {
 export const FAQ = () => {
   const faqs = [
     {
-      question: "Combien coûte App_Restaurant ?",
+      question: "Combien ça coûte vraiment ?",
       answer:
-        "Le pack complet Restaurant Pro+ est à 350 000 FCFA en paiement unique (au lieu de 700 000 FCFA). Cela inclut tout : application, installation, formation, support 6 mois et hébergement 1 an. Pas d'abonnement mensuel ! Options de paiement : comptant, 2 fois ou 3 fois sans frais.",
+        "350 000 FCFA en paiement unique (prix normal : 700 000 FCFA). TOUT est inclus : logiciel complet, installation, formation, support 6 mois, hébergement 1 an. Zéro abonnement mensuel. Zéro frais cachés. Vous pouvez payer comptant (+1 mois de support offert), en 2 fois ou en 3 fois sans frais.",
     },
     {
-      question: "Combien de temps prend la mise en place ?",
+      question: "En combien de temps je peux démarrer ?",
       answer:
-        "Seulement 7 jours ! Installation complète, personnalisation, formation de votre équipe et tests inclus. Vous serez opérationnel en moins d'une semaine.",
+        "7 jours chrono ! Du premier contact au lancement officiel. On installe tout, on personnalise aux couleurs de votre restaurant, on forme votre équipe, on teste ensemble. En une semaine, vous êtes en ligne et opérationnel.",
     },
     {
-      question: "Dois-je acheter du matériel spécial ?",
+      question: "J'ai besoin d'acheter du matériel ?",
       answer:
-        "Non ! App_Restaurant fonctionne sur vos appareils existants : smartphones, tablettes ou ordinateurs. Nous recommandons une tablette pour la cuisine et une pour la caisse, mais ce n'est pas obligatoire.",
+        "Non, zéro achat obligatoire ! App_Restaurant marche sur ce que vous avez déjà : votre smartphone, tablette ou ordinateur. Pour une expérience optimale, on recommande une tablette pour la cuisine et une pour la caisse, mais c'est optionnel.",
     },
     {
-      question: "Y a-t-il des frais cachés ou récurrents ?",
+      question: "Pas de frais cachés ? Vraiment ?",
       answer:
-        "Aucun frais caché ! Le paiement unique de 350 000 FCFA inclut tout pour la première année. À partir de la 2ème année, seul l'hébergement est à renouveler (50 000 FCFA/an). Aucun abonnement mensuel obligatoire.",
+        "Vraiment ! 350 000 FCFA = TOUT inclus pour 1 an complet. Pas d'abonnement mensuel. Pas de frais de transaction. Pas de surprise. Année 2 et suivantes : seulement 50 000 FCFA/an pour l'hébergement. C'est tout. Promis.",
     },
     {
-      question: "Proposez-vous une formation ?",
+      question: "Mon équipe va comprendre comment ça marche ?",
       answer:
-        "Oui ! Formation initiale d'une journée complète (6h) incluse dans le pack. Vous recevrez aussi un manuel utilisateur, 15+ vidéos tutorielles en accès à vie, et un guide de démarrage rapide.",
+        "Absolument ! On forme votre équipe pendant 6 heures (inclus). En plus : manuel utilisateur simple, 15+ vidéos tutorielles à vie, guide de démarrage rapide. L'interface est si intuitive que même quelqu'un qui n'a jamais utilisé un smartphone peut l'utiliser.",
     },
     {
-      question: "Quel support est inclus ?",
+      question: "Si j'ai un problème, vous m'aidez ?",
       answer:
-        "Support technique pendant 6 mois inclus : WhatsApp (7j/7, 8h-20h), Email (réponse sous 24h), Téléphone (Lun-Sam, 9h-18h), et 1 intervention sur site comprise. Support local en français par notre équipe au Congo.",
+        "Toujours ! Support inclus pendant 6 mois : WhatsApp (7j/7, 8h-20h, réponse en 5-10 min), Email (sous 24h max), Téléphone (Lun-Sam, 9h-18h), + 1 intervention sur place offerte. Support 100% local, en français, par des Congolais qui comprennent votre réalité.",
     },
     {
-      question: "Puis-je personnaliser le menu et les prix ?",
+      question: "Je peux changer mon menu quand je veux ?",
       answer:
-        "Absolument ! Vous avez un contrôle total : ajout/retrait de plats, modification des prix, upload de photos, gestion des catégories, options et variantes. Tout se fait facilement depuis votre tableau de bord.",
+        "Quand vous voulez, autant de fois que vous voulez ! Nouveau plat ? Ajoutez-le en 2 minutes. Prix qui change ? Modifiez instantanément. Rupture de stock ? Désactivez le plat d'un clic. Tout depuis votre téléphone. Vous êtes 100% autonome.",
     },
     {
-      question: "Puis-je essayer avant de payer ?",
+      question: "Je peux voir comment ça marche avant de payer ?",
       answer:
-        "Oui ! Demandez une démo gratuite de 15 minutes pour voir App_Restaurant en action.",
+        "Bien sûr ! Demandez une démo gratuite de 15 minutes. Je vous montre tout en direct : interface client, gestion des commandes, tableau de bord. Zéro engagement. Vous décidez après avoir vu.",
     },
   ];
 
@@ -61,10 +61,13 @@ export const FAQ = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            Questions fréquentes
+            Vous Avez Des Questions ?{" "}
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
+              On a Les Réponses
+            </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Tout ce que vous devez savoir sur App_Restaurant
+            Les questions que tous nos clients se posent avant de démarrer
           </p>
         </motion.div>
 

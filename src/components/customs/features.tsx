@@ -18,107 +18,107 @@ export const Features = () => {
     clients: [
       {
         icon: Smartphone,
-        title: "Commande mobile facile",
-        description: "Passez vos commandes en quelques clics depuis votre smartphone",
+        title: "Commandez en 30 secondes chrono",
+        description: "Vos clients commandent directement depuis leur téléphone. Plus de file d'attente, plus de frustration.",
       },
       {
         icon: MenuSquare,
-        title: "Menu interactif",
-        description: "Explorez le menu avec photos et descriptions détaillées",
+        title: "Menu qui donne envie",
+        description: "Photos appétissantes, descriptions détaillées. Vos plats se vendent tout seuls.",
       },
       {
         icon: Sliders,
-        title: "Personnalisation des plats",
-        description: "Ajustez vos commandes selon vos préférences",
+        title: "Chaque client est unique",
+        description: "Sans piment, extra sauce, sans oignons... Vos clients personnalisent comme ils veulent.",
       },
       {
         icon: Clock,
-        title: "Suivi en temps réel",
-        description: "Suivez l'état de votre commande en direct",
+        title: "Zéro stress pour vos clients",
+        description: "Ils voient exactement où en est leur commande : en préparation, prête, en livraison.",
       },
       {
         icon: History,
-        title: "Historique des commandes",
-        description: "Retrouvez facilement vos commandes précédentes",
+        title: "Recommander en 1 clic",
+        description: "Vos clients fidèles retrouvent leurs plats préférés et recommandent instantanément.",
       },
       {
         icon: CreditCard,
-        title: "Paiement sécurisé",
-        description: "Payez en toute sécurité avec plusieurs options de paiement",
+        title: "Paiement sans galère",
+        description: "Mobile Money, carte, espèces. Vos clients paient comme ils veulent, en toute sécurité.",
       },
     ],
     equipe: [
       {
         icon: ClipboardList,
-        title: "Gestion des commandes",
-        description: "Gérez toutes les commandes en temps réel",
+        title: "Toutes vos commandes au même endroit",
+        description: "Sur place, à emporter, livraison. Tout centralisé sur une seule interface simple.",
       },
       {
         icon: Eye,
-        title: "Suivi des commandes",
-        description: "Suivez le statut de chaque commande",
+        title: "Plus aucune commande oubliée",
+        description: "Chaque commande est traçée du début à la fin. Fini les clients mécontents.",
       },
       {
         icon: Bell,
-        title: "Notifications instantanées",
-        description: "Recevez des alertes pour chaque nouvelle commande",
+        title: "Réagissez en temps réel",
+        description: "Nouvelle commande ? Votre équipe est alertée instantanément. Service ultra-rapide garanti.",
       },
       {
         icon: LayoutGrid,
-        title: "Gestion des tables",
-        description: "Organisez et gérez l'occupation des tables",
+        title: "Salle toujours organisée",
+        description: "Visualisez vos tables en un coup d'œil. Optimisez votre capacité et votre chiffre d'affaires.",
       },
       {
         icon: MessageSquare,
-        title: "Communication d'équipe",
-        description: "Coordonnez-vous efficacement entre cuisine et service",
+        title: "Cuisine et salle synchronisées",
+        description: "Fini les malentendus. Votre équipe travaille comme une machine bien huilée.",
       },
       {
         icon: Package,
-        title: "Gestion du stock",
-        description: "Suivez les stocks et recevez des alertes",
+        title: "Ne manquez plus jamais d'ingrédients",
+        description: "Alertes automatiques quand un produit est bientôt épuisé. Vos clients ont toujours ce qu'ils veulent.",
       },
       {
         icon: Zap,
-        title: "Interface intuitive",
-        description: "Travaillez avec une interface simple et rapide",
+        title: "Si simple qu'un enfant pourrait l'utiliser",
+        description: "Votre équipe est opérationnelle en 10 minutes. Zéro formation compliquée.",
       },
     ],
     proprietaire: [
       {
         icon: LayoutDashboard,
-        title: "Tableau de bord complet",
-        description: "Visualisez toutes les métriques importantes en un coup d'œil",
+        title: "Pilotez votre business comme un pro",
+        description: "Ventes du jour, plats populaires, performance équipe. Tout ce qui compte, en temps réel.",
       },
       {
         icon: BarChart3,
-        title: "Rapports détaillés",
-        description: "Analysez les ventes, revenus et performances",
+        title: "Comprenez vraiment votre activité",
+        description: "Rapports clairs et actionables. Identifiez ce qui marche et ce qui doit changer.",
       },
       {
         icon: FileEdit,
-        title: "Gestion du menu",
-        description: "Créez et modifiez votre menu facilement",
+        title: "Changez votre menu en 2 minutes",
+        description: "Nouveau plat ? Prix modifié ? Rupture de stock ? Mettez à jour instantanément depuis votre téléphone.",
       },
       {
         icon: UserCog,
-        title: "Gestion du personnel",
-        description: "Gérez les comptes et permissions de votre équipe",
+        title: "Contrôlez qui fait quoi",
+        description: "Droits d'accès personnalisés. Votre caissier ne voit que ce qu'il doit voir.",
       },
       {
         icon: Activity,
-        title: "Statistiques en temps réel",
-        description: "Suivez les performances de votre restaurant en direct",
+        title: "Sachez toujours où vous en êtes",
+        description: "Chiffre d'affaires du jour, commandes en cours, stock restant. Tout en direct.",
       },
       {
         icon: TrendingUp,
-        title: "Analyse des tendances",
-        description: "Identifiez les plats populaires et les heures de pointe",
+        title: "Prenez les bonnes décisions",
+        description: "Quel plat cartonne ? Quelle heure est la plus rentable ? Les données vous guident.",
       },
       {
         icon: Download,
-        title: "Export de données",
-        description: "Exportez vos données pour la comptabilité",
+        title: "Comptabilité simplifiée",
+        description: "Exportez tout en Excel ou PDF. Votre comptable vous remerciera.",
       },
     ],
   };
@@ -139,10 +139,13 @@ export const Features = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            Fonctionnalités Logiciel Gestion Restaurant Complètes
+            Tout Ce Dont Votre Restaurant a Besoin,{" "}
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
+              En Une Seule Solution
+            </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Logiciel de gestion restaurant avec commande en ligne, caisse enregistreuse, gestion des stocks et menu digital. Solution adaptée aux restaurants, maquis et nganda au Congo.
+            Découvrez comment App_Restaurant simplifie chaque aspect de votre activité : des commandes clients à la gestion financière, en passant par votre équipe.
           </p>
         </motion.div>
 

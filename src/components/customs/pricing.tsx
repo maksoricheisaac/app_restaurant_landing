@@ -90,16 +90,19 @@ export const Pricing = () => {
             <span>OFFRE DE LANCEMENT</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            Logiciel Gestion Restaurant Complet à 350 000 FCFA
+            Investissez 350 000 FCFA Aujourd'hui,{" "}
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
+              Gagnez 10x Plus Demain
+            </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
-            Logiciel de gestion restaurant avec commande en ligne, caisse enregistreuse et menu digital. Solution clé en main pour restaurants au Congo. Paiement unique, sans abonnement mensuel.
+            Un seul paiement. Aucun abonnement mensuel. Tout inclus : logiciel complet, installation, formation, support 6 mois, hébergement 1 an. Rentabilisé en moins de 2 mois.
           </p>
           <div className="flex items-center justify-center space-x-4">
             <span className="text-2xl line-through text-muted-foreground">700 000 FCFA</span>
             <span className="text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">350 000 FCFA</span>
           </div>
-          <p className="text-sm text-primary font-semibold mt-2">Économisez 350 000 FCFA (50% de réduction)</p>
+          <p className="text-sm text-primary font-semibold mt-2">🔥 Économisez 350 000 FCFA - Offre limitée aux 5 premiers</p>
         </motion.div>
 
         {/* What's Included */}
@@ -110,7 +113,8 @@ export const Pricing = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h3 className="text-2xl sm:text-3xl font-bold mb-2">Ce qui est inclus</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold mb-2">Tout Ce Que Vous Obtenez Pour 350 000 FCFA</h3>
+            <p className="text-muted-foreground mb-8">Valeur réelle : 700 000 FCFA - Vous économisez 50%</p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -153,13 +157,13 @@ export const Pricing = () => {
           <div className="bg-card rounded-2xl p-8 border-2 border-accent shadow-glow">
             <div className="text-center mb-6">
               <div className="inline-block bg-accent text-accent-foreground px-4 py-2 rounded-full font-bold mb-4">
-                🏆 OFFRE EXCLUSIVE - 5 Premiers Restaurants
+                🏆 BONUS EXCLUSIF - 5 Premiers Restaurants Seulement
               </div>
               <h3 className="text-2xl font-bold">
-                Hébergement Premium Offert (Valeur 120 000 FCFA)
+                Hébergement Premium OFFERT Pendant 1 An
               </h3>
               <p className="text-muted-foreground mt-2">
-                Je m&apos;engage personnellement à héberger votre application pendant 1 an
+                Valeur 120 000 FCFA - Entièrement pris en charge pour vous
               </p>
             </div>
             <div className="space-y-3">
@@ -180,7 +184,7 @@ export const Pricing = () => {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto mb-16"
         >
-          <h3 className="text-2xl font-bold mb-8 text-center">Options de paiement</h3>
+          <h3 className="text-2xl font-bold mb-8 text-center">Choisissez Votre Mode de Paiement</h3>
           <div className="grid md:grid-cols-3 gap-6">
             {paymentOptions.map((option, index) => (
               <div
@@ -189,7 +193,10 @@ export const Pricing = () => {
                   index === 0 ? "border-primary shadow-glow" : "border-border"
                 } hover:shadow-xl transition-all`}
               >
-                <h4 className="font-bold text-lg mb-2">{option.name}</h4>
+                <h4 className="font-bold text-lg mb-2">
+                  {option.name}
+                  {index === 0 && <span className="ml-2 text-xs bg-primary/20 px-2 py-1 rounded">POPULAIRE</span>}
+                </h4>
                 <div className="text-3xl font-bold text-primary mb-3">{option.price} <span className="text-sm text-muted-foreground">FCFA</span></div>
                 <div className="inline-flex items-center px-3 py-1 bg-primary/10 rounded-full">
                   <span className="text-sm font-semibold text-primary">{option.bonus}</span>
@@ -209,15 +216,15 @@ export const Pricing = () => {
           viewport={{ once: true }}
           className="max-w-3xl mx-auto bg-muted/50 rounded-xl p-8 border border-border text-center"
         >
-          <h3 className="text-2xl font-bold mb-4">⏰ Offre Limitée</h3>
+          <h3 className="text-2xl font-bold mb-4">⏰ Cette Offre Expire Bientôt</h3>
           <ul className="space-y-2 text-left inline-block">
             <li className="flex items-center space-x-2">
               <Check className="w-5 h-5 text-primary" />
-              <span>Valable jusqu&apos;au <strong>25 octobre 2025</strong></span>
+              <span>Offre valable jusqu&apos;au <strong>25 octobre 2025</strong> uniquement</span>
             </li>
             <li className="flex items-center space-x-2">
               <Check className="w-5 h-5 text-primary" />
-              <span>Réservée aux <strong>5 premiers restaurants</strong></span>
+              <span>Limitée aux <strong>5 premiers restaurants</strong> qui réservent</span>
             </li>
           </ul>
           <Button
@@ -226,7 +233,7 @@ export const Pricing = () => {
             className="mt-6"
             onClick={() => scrollToSection("#contact")}
           >
-            Réserver Maintenant
+            Je Réserve Ma Place
           </Button>
         </motion.div>
       </div>

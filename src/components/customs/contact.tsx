@@ -35,10 +35,14 @@ export const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            Obtenez Votre Logiciel de Gestion Restaurant
+            Prêt à Transformer{" "}
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
+              Votre Restaurant
+            </span>
+            ?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Contactez-moi pour digitaliser votre restaurant avec notre logiciel complet : commande en ligne, caisse enregistreuse, gestion des stocks. Démo gratuite disponible.
+            Contactez-moi maintenant pour une démo gratuite. Dans 7 jours, votre restaurant pourrait déjà être digitalisé et générer plus de ventes.
           </p>
         </motion.div>
 
@@ -74,9 +78,9 @@ export const Contact = () => {
             className="bg-gradient-primary rounded-2xl p-12 text-center text-primary-foreground"
           >
             <MessageCircle className="w-16 h-16 mx-auto mb-6" />
-            <h3 className="text-3xl font-bold mb-4">Démarrez la Digitalisation de Votre Restaurant</h3>
+            <h3 className="text-3xl font-bold mb-4">Parlons de Votre Restaurant</h3>
             <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-              Contactez-moi sur WhatsApp pour une démo gratuite de notre logiciel de gestion restaurant. Commande en ligne, caisse, stocks - 350 000 FCFA sans abonnement.
+              Un message WhatsApp suffit. Je réponds en moins de 5 minutes. Démo gratuite, sans engagement. Vous décidez après avoir vu.
             </p>
             <a
               href="https://wa.me/242056073456?text=Bonjour%20Riche,%20je%20suis%20int%C3%A9ress%C3%A9%20par%20App_Restaurant"
@@ -89,7 +93,7 @@ export const Contact = () => {
                 className="text-lg px-8 py-6"
               >
                 <MessageCircle className="mr-2 w-6 h-6" />
-                Démarrer la conversation
+                Écrire sur WhatsApp Maintenant
               </Button>
             </a>
           </motion.div>

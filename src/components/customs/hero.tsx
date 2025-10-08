@@ -12,6 +12,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { GridBackground } from "@/components/customs/grid-background";
 
 export const Hero = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -23,8 +24,10 @@ export const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-20 pb-16 overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-hero -z-10" />
+      {/* Grid Background */}
+      <div className="absolute inset-0 -z-10">
+        <GridBackground />
+      </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -41,7 +44,7 @@ export const Hero = () => {
               transition={{ delay: 0.2 }}
               className="inline-block mb-4 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium"
             >
-              🇨🇩 Solution 100% Congolaise
+               Conçu pour les Restaurants Congolais
             </motion.div>
 
             <motion.h1
@@ -50,9 +53,9 @@ export const Hero = () => {
               transition={{ delay: 0.3 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
             >
-              Logiciel de Gestion Restaurant & Commande en Ligne{" "}
+              Transformez Votre Restaurant en{" "}
               <span className="text-primary">
-                au Congo
+                Machine à Ventes
               </span>
             </motion.h1>
 
@@ -62,8 +65,7 @@ export const Hero = () => {
               transition={{ delay: 0.4 }}
               className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0"
             >
-              Logiciel complet de gestion restaurant avec commande en ligne, caisse enregistreuse, gestion des stocks et menu digital QR code. 
-              Digitalisez votre restaurant, maquis ou nganda. Augmentez vos ventes de 35% et simplifiez la gestion quotidienne.
+              Le seul logiciel de gestion restaurant dont vous avez besoin : Commandes en ligne 24/7, caisse automatique, menu QR code, gestion des stocks. Rejoignez les 50+ restaurants qui ont augmenté leurs ventes de 35% au Congo.
             </motion.p>
 
             <motion.div
@@ -78,7 +80,7 @@ export const Hero = () => {
                 onClick={() => scrollToSection("#contact")}
                 className="group cursor-pointer"
               >
-                Demander une Démo
+                Démarrer Gratuitement
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
@@ -88,7 +90,7 @@ export const Hero = () => {
                 className="cursor-pointer"
               >
                 <Play className="mr-2 w-5 h-5" />
-                Voir Comment ça Marche
+                Voir la Démo en Vidéo
               </Button>
             </motion.div>
 
@@ -105,7 +107,7 @@ export const Hero = () => {
               </div>
               <div className="text-center lg:text-left">
                 <div className="text-3xl font-bold text-primary">7j</div>
-                <div className="text-sm text-muted-foreground">Mise en place</div>
+                <div className="text-sm text-muted-foreground">Installation</div>
               </div>
               <div className="text-center lg:text-left">
                 <div className="text-3xl font-bold text-primary">24/7</div>
@@ -144,8 +146,8 @@ export const Hero = () => {
                   +35%
                 </div>
                 <div>
-                  <div className="font-semibold">Ventes en hausse</div>
-                  <div className="text-sm text-muted-foreground">En moyenne</div>
+                  <div className="font-semibold">Chiffre d'affaires</div>
+                  <div className="text-sm text-muted-foreground">Augmentation moyenne</div>
                 </div>
               </div>
             </motion.div>

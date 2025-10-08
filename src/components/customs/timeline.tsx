@@ -6,26 +6,26 @@ export const Timeline = () => {
   const steps = [
     {
       day: "Jour 1-2",
-      title: "Configuration & Personnalisation",
-      description: "Création de votre compte, personnalisation du menu avec photos et paramétrage des options de paiement",
+      title: "On Installe Tout Pour Vous",
+      description: "Création compte, ajout de votre menu avec photos, configuration paiements. Vous ne faites rien, on s'occupe de tout.",
       icon: Settings,
     },
     {
       day: "Jour 3-4",
-      title: "Formation de l'équipe",
-      description: "Session de formation complète pour vos serveurs, cuisiniers et caissiers. Support vidéo inclus.",
+      title: "Votre Équipe Devient Experte",
+      description: "Formation complète de 6h pour toute l'équipe. Serveurs, cuisiniers, caissiers : tout le monde sait utiliser le logiciel.",
       icon: GraduationCap,
     },
     {
       day: "Jour 5-6",
-      title: "Tests & Ajustements",
-      description: "Phase de test avec commandes fictives. Ajustements selon vos retours et optimisations finales.",
+      title: "On Teste Ensemble, On Ajuste",
+      description: "Commandes de test, ajustements selon vos besoins. Tout doit être parfait avant le lancement officiel.",
       icon: CheckCircle2,
     },
     {
       day: "Jour 7",
-      title: "Lancement officiel",
-      description: "Votre restaurant est en ligne ! Communication client et suivi rapproché pendant la première semaine.",
+      title: "Vous Êtes En Ligne !",
+      description: "Votre restaurant est digitalisé. Vos clients peuvent commander. On reste avec vous toute la semaine pour assurer.",
       icon: Rocket,
     },
   ];
@@ -41,17 +41,16 @@ export const Timeline = () => {
         >
           <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Calendar className="w-4 h-4" />
-            <span>Démarrage ultra-rapide</span>
+            <span>Lancement Express</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            En ligne en seulement{" "}
+            De Zéro à Héros en{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              7 jours
-            </span>{" "}
-            avec App_Restaurant
+              7 Jours Chrono
+            </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Un processus simple et guidé pour digitaliser votre restaurant rapidement
+            Le processus le plus simple et rapide pour digitaliser votre restaurant. Pas de stress, on gère tout.
           </p>
         </motion.div>
 
@@ -101,7 +100,7 @@ export const Timeline = () => {
           className="text-center mt-12"
         >
           <p className="text-lg font-medium mb-4">
-            Prêt à digitaliser votre restaurant ?
+            Dans 7 jours, vous pourriez déjà recevoir vos premières commandes en ligne
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
