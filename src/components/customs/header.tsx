@@ -86,24 +86,24 @@ export const Header = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
+          <Link href="/" className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
-              className="flex items-center space-x-3"
+              className="flex items-center space-x-2 sm:space-x-3"
             >
               <Image
                 src="/logo.png"
                 alt="App_Restaurant Logo"
                 width={50}
                 height={50}
-                className="w-8 h-8"
+                className="w-7 h-7 sm:w-8 sm:h-8"
               />
-              <span className="text-xl lg:text-2xl font-bold text-primary">
+              <span className="text-base sm:text-xl lg:text-2xl font-bold text-primary truncate max-w-[140px] sm:max-w-none">
                 App_Restaurant
               </span>
             </motion.div>
@@ -148,13 +148,13 @@ export const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-md hover:bg-muted transition-colors"
+            className="lg:hidden p-2 rounded-md hover:bg-muted transition-colors flex-shrink-0"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
+              <X className="w-5 h-5 sm:w-6 sm:h-6" />
             ) : (
-              <Menu className="w-6 h-6" />
+              <Menu className="w-5 h-5 sm:w-6 sm:h-6" />
             )}
           </button>
         </div>
@@ -169,13 +169,13 @@ export const Header = () => {
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden bg-background border-t border-border"
           >
-            <nav className="container mx-auto px-4 py-4 flex flex-col space-y-2">
+            <nav className="container mx-auto px-3 sm:px-4 py-4 flex flex-col space-y-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
                   onClick={() => scrollToSection(link.href)}
-                  className={`px-4 py-3 text-left text-sm font-medium rounded-md transition-all ${
+                  className={`px-3 sm:px-4 py-3 text-left text-sm font-medium rounded-md transition-all ${
                     activeSection === link.href.substring(1)
                       ? "text-primary bg-primary/10 font-bold border-l-4 border-primary"
                       : "text-foreground hover:text-primary hover:bg-muted"
@@ -186,7 +186,7 @@ export const Header = () => {
               ))}
               <Button
                 variant="cta"
-                className="w-full"
+                className="w-full text-sm sm:text-base"
                 onClick={() => scrollToSection("#contact")}
               >
                 Démarrer Gratuitement

@@ -52,21 +52,21 @@ export const FAQ = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 sm:py-20 bg-muted/30">
+      <div className="container mx-auto px-3 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-2">
             Vous Avez Des Questions ?{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               On a Les Réponses
             </span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
             Les questions que tous nos clients se posent avant de démarrer
           </p>
         </motion.div>
@@ -82,12 +82,12 @@ export const FAQ = () => {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-card border border-border rounded-lg px-6 data-[state=open]:shadow-md transition-shadow"
+                className="bg-card border border-border rounded-lg px-3 sm:px-6 data-[state=open]:shadow-md transition-shadow"
               >
-                <AccordionTrigger className="text-left font-semibold hover:text-primary">
+                <AccordionTrigger className="text-left text-sm sm:text-base font-semibold hover:text-primary break-words">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed">
+                <AccordionContent className="text-sm sm:text-base text-muted-foreground leading-relaxed break-words">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -99,9 +99,9 @@ export const FAQ = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mt-12"
+          className="text-center mt-8 sm:mt-12 px-2"
         >
-          <p className="text-lg mb-4">Vous avez d&apos;autres questions ?</p>
+          <p className="text-base sm:text-lg mb-4">Vous avez d&apos;autres questions ?</p>
           <button
             onClick={() => {
               const element = document.querySelector("#contact");

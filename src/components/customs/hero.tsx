@@ -29,8 +29,8 @@ export const Hero = () => {
         <GridBackground />
       </div>
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -42,7 +42,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-block mb-4 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium"
+              className="inline-block mb-4 px-3 sm:px-4 py-2 bg-primary/10 text-primary rounded-full text-xs sm:text-sm font-medium"
             >
                Conçu pour les Restaurants Congolais
             </motion.div>
@@ -51,7 +51,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6"
             >
               Transformez Votre Restaurant en{" "}
               <span className="text-primary">
@@ -63,22 +63,22 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0"
+              className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0"
             >
-              Le seul logiciel de gestion restaurant dont vous avez besoin : Commandes en ligne 24/7, caisse automatique, menu QR code, gestion des stocks. Rejoignez les 50+ restaurants qui ont augmenté leurs ventes de 35% au Congo.
+              Le seul logiciel de gestion restaurant dont vous avez besoin : Commandes en ligne 24/7, caisse automatique, menu QR code, gestion des stocks. Rejoignez les restaurants qui souhaitent augmenter leurs ventes de 35% au Congo.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
             >
               <Button
                 variant="hero"
                 size="xl"
                 onClick={() => scrollToSection("#contact")}
-                className="group cursor-pointer"
+                className="group cursor-pointer text-sm sm:text-base w-full sm:w-auto"
               >
                 Démarrer Gratuitement
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
@@ -87,10 +87,10 @@ export const Hero = () => {
                 variant="outline"
                 size="xl"
                 onClick={() => setIsVideoOpen(true)}
-                className="cursor-pointer"
+                className="cursor-pointer text-sm sm:text-base w-full sm:w-auto"
               >
-                <Play className="mr-2 w-5 h-5" />
-                Voir la Démo en Vidéo
+                <Play className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
+                Voir la Démo
               </Button>
             </motion.div>
 
@@ -99,15 +99,15 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="grid grid-cols-3 gap-6 mt-12 max-w-md mx-auto lg:mx-0"
+              className="grid grid-cols-2 gap-4 sm:gap-6 mt-8 sm:mt-12 max-w-xs sm:max-w-md mx-auto lg:mx-0"
             >
               <div className="text-center lg:text-left">
-                <div className="text-3xl font-bold text-primary">7j</div>
-                <div className="text-sm text-muted-foreground">Installation</div>
+                <div className="text-2xl sm:text-3xl font-bold text-primary">7j</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Installation</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-3xl font-bold text-primary">24/7</div>
-                <div className="text-sm text-muted-foreground">Support</div>
+                <div className="text-2xl sm:text-3xl font-bold text-primary">24/7</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Support</div>
               </div>
             </motion.div>
           </motion.div>
@@ -135,15 +135,15 @@ export const Hero = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.8 }}
-              className="absolute -bottom-6 -left-6 bg-card p-6 rounded-xl shadow-xl border border-border"
+              className="absolute -bottom-4 sm:-bottom-6 left-2 sm:-left-6 bg-card p-3 sm:p-6 rounded-xl shadow-xl border border-border max-w-[200px] sm:max-w-none"
             >
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
+              <div className="flex items-center space-x-2 sm:space-x-3">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-base sm:text-xl flex-shrink-0">
                   +35%
                 </div>
-                <div>
-                  <div className="font-semibold">Chiffre d&apos;affaires</div>
-                  <div className="text-sm text-muted-foreground">Augmentation moyenne</div>
+                <div className="min-w-0">
+                  <div className="font-semibold text-sm sm:text-base truncate">Chiffre d&apos;affaires</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground truncate">Augmentation moyenne</div>
                 </div>
               </div>
             </motion.div>

@@ -46,21 +46,21 @@ export const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" className="py-12 sm:py-20">
+      <div className="container mx-auto px-3 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-2">
             Ils Ont Transformé Leur Restaurant,{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               À Votre Tour
             </span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
             Des restaurateurs comme vous qui ont fait le choix de la digitalisation et ne regrettent rien
           </p>
         </motion.div>
@@ -73,36 +73,36 @@ export const Testimonials = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.3 }}
-              className="bg-card rounded-2xl p-8 md:p-12 border border-border shadow-xl relative"
+              className="bg-card rounded-2xl p-4 sm:p-8 md:p-12 border border-border shadow-xl relative"
             >
               {/* Quote Icon */}
-              <Quote className="absolute top-8 right-8 w-16 h-16 text-primary/10" />
+              <Quote className="absolute top-4 right-4 sm:top-8 sm:right-8 w-12 h-12 sm:w-16 sm:h-16 text-primary/10" />
 
               {/* Rating */}
-              <div className="flex items-center space-x-1 mb-6">
+              <div className="flex items-center space-x-1 mb-4 sm:mb-6">
                 {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
                   <Star
                     key={i}
-                    className="w-5 h-5 fill-primary text-primary"
+                    className="w-4 h-4 sm:w-5 sm:h-5 fill-primary text-primary"
                   />
                 ))}
               </div>
 
               {/* Comment */}
-              <p className="text-lg md:text-xl leading-relaxed mb-8 relative z-10">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-6 sm:mb-8 relative z-10 break-words">
                 &ldquo;{testimonials[currentIndex].comment}&rdquo;
               </p>
 
               {/* Author */}
-              <div className="flex items-center space-x-4">
-                <div className="w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center text-3xl">
+              <div className="flex items-center space-x-3 sm:space-x-4">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-primary flex items-center justify-center text-2xl sm:text-3xl flex-shrink-0">
                   {testimonials[currentIndex].image}
                 </div>
-                <div>
-                  <div className="font-bold text-lg">
+                <div className="min-w-0">
+                  <div className="font-bold text-base sm:text-lg break-words">
                     {testimonials[currentIndex].name}
                   </div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-xs sm:text-sm text-muted-foreground break-words">
                     {testimonials[currentIndex].role} •{" "}
                     {testimonials[currentIndex].restaurant}
                   </div>

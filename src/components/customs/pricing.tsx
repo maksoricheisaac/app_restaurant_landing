@@ -76,32 +76,32 @@ export const Pricing = () => {
   ];
 
   return (
-    <section id="pricing" className="py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="pricing" className="py-12 sm:py-20">
+      <div className="container mx-auto px-3 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <Star className="w-4 h-4" />
+          <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium mb-4">
+            <Star className="w-3 h-3 sm:w-4 sm:h-4" />
             <span>OFFRE DE LANCEMENT</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-2">
             Investissez 350 000 FCFA Aujourd&apos;hui,{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               Gagnez 10x Plus Demain
             </span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto mb-6 px-2">
             Un seul paiement. Aucun abonnement mensuel. Tout inclus : logiciel complet, installation, formation, support 6 mois, hébergement 1 an. Rentabilisé en moins de 2 mois.
           </p>
-          <div className="flex items-center justify-center space-x-4">
-            <span className="text-2xl line-through text-muted-foreground">700 000 FCFA</span>
-            <span className="text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">350 000 FCFA</span>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+            <span className="text-lg sm:text-2xl line-through text-muted-foreground">700 000 FCFA</span>
+            <span className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">350 000 FCFA</span>
           </div>
-          <p className="text-sm text-primary font-semibold mt-2">🔥 Économisez 350 000 FCFA - Offre limitée aux 5 premiers</p>
+          <p className="text-xs sm:text-sm text-primary font-semibold mt-2 px-2">🔥 Économisez 350 000 FCFA - Offre limitée aux 5 premiers</p>
         </motion.div>
 
         {/* What's Included */}
@@ -110,13 +110,13 @@ export const Pricing = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-8 sm:mb-12"
           >
-            <h3 className="text-2xl sm:text-3xl font-bold mb-2">Tout Ce Que Vous Obtenez Pour 350 000 FCFA</h3>
-            <p className="text-muted-foreground mb-8">Valeur réelle : 700 000 FCFA - Vous économisez 50%</p>
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 px-2">Tout Ce Que Vous Obtenez Pour 350 000 FCFA</h3>
+            <p className="text-sm sm:text-base text-muted-foreground mb-8 px-2">Valeur réelle : 700 000 FCFA - Vous économisez 50%</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {packageIncludes.map((section, index) => (
               <motion.div
                 key={index}
@@ -124,19 +124,19 @@ export const Pricing = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-card rounded-xl p-8 border border-border shadow-md hover:shadow-xl transition-shadow"
+                className="bg-card rounded-xl p-4 sm:p-6 lg:p-8 border border-border shadow-md hover:shadow-xl transition-shadow"
               >
-                <h4 className="text-xl font-bold mb-6 flex items-center">
-                  <span className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-sm mr-3">
+                <h4 className="text-base sm:text-lg lg:text-xl font-bold mb-4 sm:mb-6 flex items-center">
+                  <span className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xs sm:text-sm mr-2 sm:mr-3 flex-shrink-0">
                     {index + 1}
                   </span>
-                  {section.category}
+                  <span className="break-words">{section.category}</span>
                 </h4>
-                <ul className="space-y-3">
+                <ul className="space-y-2 sm:space-y-3">
                   {section.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start space-x-3">
-                      <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">{item}</span>
+                    <li key={idx} className="flex items-start space-x-2 sm:space-x-3">
+                      <Check className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-xs sm:text-sm break-words">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -153,23 +153,23 @@ export const Pricing = () => {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto mb-16"
         >
-          <div className="bg-card rounded-2xl p-8 border-2 border-accent shadow-glow">
-            <div className="text-center mb-6">
-              <div className="inline-block bg-accent text-accent-foreground px-4 py-2 rounded-full font-bold mb-4">
+          <div className="bg-card rounded-2xl p-4 sm:p-6 lg:p-8 border-2 border-accent shadow-glow">
+            <div className="text-center mb-4 sm:mb-6">
+              <div className="inline-block bg-accent text-accent-foreground px-3 sm:px-4 py-2 rounded-full font-bold mb-4 text-xs sm:text-sm">
                 🏆 BONUS EXCLUSIF - 5 Premiers Restaurants Seulement
               </div>
-              <h3 className="text-2xl font-bold">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold px-2">
                 Hébergement Premium OFFERT Pendant 1 An
               </h3>
-              <p className="text-muted-foreground mt-2">
+              <p className="text-sm sm:text-base text-muted-foreground mt-2 px-2">
                 Valeur 120 000 FCFA - Entièrement pris en charge pour vous
               </p>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-2 sm:space-y-3">
               {exclusiveBonuses.map((bonus, index) => (
-                <div key={index} className="flex items-start space-x-3 p-4 bg-accent/5 rounded-lg border border-accent/20">
-                  <Star className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span className="font-medium">{bonus}</span>
+                <div key={index} className="flex items-start space-x-2 sm:space-x-3 p-3 sm:p-4 bg-accent/5 rounded-lg border border-accent/20">
+                  <Star className="w-4 h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="font-medium text-xs sm:text-sm break-words">{bonus}</span>
                 </div>
               ))}
             </div>
@@ -183,27 +183,27 @@ export const Pricing = () => {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto mb-16"
         >
-          <h3 className="text-2xl font-bold mb-8 text-center">Choisissez Votre Mode de Paiement</h3>
-          <div className="grid md:grid-cols-3 gap-6">
+          <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center px-2">Choisissez Votre Mode de Paiement</h3>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {paymentOptions.map((option, index) => (
               <div
                 key={index}
-                className={`bg-card rounded-xl p-6 border-2 ${
+                className={`bg-card rounded-xl p-4 sm:p-6 border-2 ${
                   index === 0 ? "border-primary shadow-glow" : "border-border"
                 } hover:shadow-xl transition-all`}
               >
-                <h4 className="font-bold text-lg mb-2">
+                <h4 className="font-bold text-base sm:text-lg mb-2 break-words">
                   {option.name}
                   {index === 0 && <span className="ml-2 text-xs bg-primary/20 px-2 py-1 rounded">POPULAIRE</span>}
                 </h4>
-                <div className="text-3xl font-bold text-primary mb-3">{option.price} <span className="text-sm text-muted-foreground">FCFA</span></div>
-                <div className="inline-flex items-center px-3 py-1 bg-primary/10 rounded-full">
-                  <span className="text-sm font-semibold text-primary">{option.bonus}</span>
+                <div className="text-2xl sm:text-3xl font-bold text-primary mb-3 break-words">{option.price} <span className="text-xs sm:text-sm text-muted-foreground">FCFA</span></div>
+                <div className="inline-flex items-center px-2 sm:px-3 py-1 bg-primary/10 rounded-full">
+                  <span className="text-xs sm:text-sm font-semibold text-primary">{option.bonus}</span>
                 </div>
               </div>
             ))}
           </div>
-          <p className="text-center text-muted-foreground mt-6">
+          <p className="text-center text-xs sm:text-sm text-muted-foreground mt-6 px-2">
             Moyens acceptés : Mobile Money (AIRTEL, MTN) • Espèces • Carte Onyfast
           </p>
         </motion.div>
@@ -213,17 +213,17 @@ export const Pricing = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-3xl mx-auto bg-muted/50 rounded-xl p-8 border border-border text-center"
+          className="max-w-3xl mx-auto bg-muted/50 rounded-xl p-4 sm:p-6 lg:p-8 border border-border text-center"
         >
-          <h3 className="text-2xl font-bold mb-4">⏰ Cette Offre Expire Bientôt</h3>
+          <h3 className="text-xl sm:text-2xl font-bold mb-4 px-2">⏰ Cette Offre Expire Bientôt</h3>
           <ul className="space-y-2 text-left inline-block">
-            <li className="flex items-center space-x-2">
-              <Check className="w-5 h-5 text-primary" />
-              <span>Offre valable jusqu&apos;au <strong>25 octobre 2025</strong> uniquement</span>
+            <li className="flex items-start space-x-2">
+              <Check className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+              <span className="text-sm sm:text-base break-words">Offre valable jusqu&apos;au <strong>25 octobre 2025</strong> uniquement</span>
             </li>
-            <li className="flex items-center space-x-2">
-              <Check className="w-5 h-5 text-primary" />
-              <span>Limitée aux <strong>5 premiers restaurants</strong> qui réservent</span>
+            <li className="flex items-start space-x-2">
+              <Check className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+              <span className="text-sm sm:text-base break-words">Limitée aux <strong>5 premiers restaurants</strong> qui réservent</span>
             </li>
           </ul>
           <Button

@@ -40,50 +40,50 @@ export const Footer = () => {
 
   return (
     <footer className="bg-foreground/5 border-t border-border">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+      <div className="container mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {/* Brand */}
-          <div className="col-span-2">
-            <div className="flex items-center space-x-3 mb-4">
+          <div className="col-span-1 sm:col-span-2">
+            <div className="flex items-center space-x-2 sm:space-x-3 mb-4">
               <Image
                 src="/logo.png"
                 alt="App_Restaurant Logo"
                 width={40}
                 height={40}
-                className="w-10 h-10"
+                className="w-8 h-8 sm:w-10 sm:h-10"
               />
-              <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              <span className="text-lg sm:text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
                 App_Restaurant
               </span>
             </div>
-            <p className="text-muted-foreground mb-6 max-w-sm">
+            <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 max-w-sm">
               Logiciel de gestion restaurant avec commande en ligne, caisse enregistreuse, gestion des stocks et menu digital QR code. Solution 100% congolaise pour restaurants, maquis et nganda en Afrique.
             </p>
-            <div className="space-y-2 text-sm">
+            <div className="space-y-2 text-xs sm:text-sm">
               <a
                 href="mailto:contact@richemakso.site"
-                className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
+                className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors break-all"
               >
-                <Mail className="w-4 h-4" />
-                <span>contact@richemakso.site</span>
+                <Mail className="w-4 h-4 flex-shrink-0" />
+                <span className="break-all">contact@richemakso.site</span>
               </a>
               <a
                 href="tel:+242056073456"
                 className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4 flex-shrink-0" />
                 <span>+242 05 607 34 56</span>
               </a>
-              <div className="flex items-center space-x-2 text-muted-foreground">
-                <MapPin className="w-4 h-4" />
-                <span>Avenue de l&apos;Indépendance, Brazzaville</span>
+              <div className="flex items-start space-x-2 text-muted-foreground">
+                <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                <span className="break-words">Avenue de l&apos;Indépendance, Brazzaville</span>
               </div>
             </div>
           </div>
 
           {/* Product Column */}
           <div>
-            <h3 className="font-semibold mb-4">Produit</h3>
+            <h3 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Produit</h3>
             <ul className="space-y-2">
               {footerLinks.product.map((link) => (
                 <li key={link.name}>
@@ -100,7 +100,7 @@ export const Footer = () => {
 
           {/* Company Column */}
           <div>
-            <h3 className="font-semibold mb-4">À propos</h3>
+            <h3 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">À propos</h3>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
@@ -126,7 +126,7 @@ export const Footer = () => {
 
           {/* Support Column */}
           <div>
-            <h3 className="font-semibold mb-4">Liens utiles</h3>
+            <h3 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Liens utiles</h3>
             <ul className="space-y-2">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
@@ -152,8 +152,8 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p className="text-sm text-muted-foreground">
+        <div className="pt-6 sm:pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <p className="text-xs sm:text-sm text-muted-foreground text-center md:text-left">
             © 2025 App_Restaurant – Propulsé par{" "}
             <a
               href="#"
@@ -165,15 +165,15 @@ export const Footer = () => {
           </p>
 
           {/* Social Links */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3 sm:space-x-4">
             {socialLinks.map((social) => (
               <a
                 key={social.label}
                 href={social.href}
                 aria-label={social.label}
-                className="w-10 h-10 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors"
               >
-                <social.icon className="w-5 h-5" />
+                <social.icon className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
             ))}
           </div>

@@ -125,21 +125,21 @@ export const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="features" className="py-12 sm:py-20 bg-muted/30">
+      <div className="container mx-auto px-3 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-2">
             Tout Ce Dont Votre Restaurant a Besoin,{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               En Une Seule Solution
             </span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
             Découvrez comment App_Restaurant simplifie chaque aspect de votre activité : des commandes clients à la gestion financière, en passant par votre équipe.
           </p>
         </motion.div>
@@ -149,14 +149,14 @@ export const Features = () => {
           onValueChange={setActiveTab}
           className="max-w-6xl mx-auto"
         >
-          <TabsList className="grid grid-cols-1 sm:grid-cols-3 h-auto mb-12 bg-background">
+          <TabsList className="grid grid-cols-1 sm:grid-cols-3 h-auto mb-8 sm:mb-12 bg-background">
             {tabsData.map((tab) => (
               <TabsTrigger
                 key={tab.value}
                 value={tab.value}
-                className="flex items-center justify-center space-x-2 py-4 px-6 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+                className="flex items-center justify-center space-x-2 py-3 sm:py-4 px-3 sm:px-6 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-sm sm:text-base"
               >
-                <tab.icon className="w-5 h-5" />
+                <tab.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span className="font-medium">{tab.label}</span>
               </TabsTrigger>
             ))}
@@ -170,26 +170,26 @@ export const Features = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.3 }}
-                  className="grid lg:grid-cols-2 gap-8 items-center"
+                  className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center"
                 >
                   {/* Features List */}
-                  <div className="space-y-6">
+                  <div className="space-y-4 sm:space-y-6">
                     {featureList.map((feature, index) => (
                       <motion.div
                         key={index}
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: index * 0.1 }}
-                        className="flex items-start space-x-4 p-4 rounded-lg bg-card border border-border hover:shadow-md transition-shadow"
+                        className="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 rounded-lg bg-card border border-border hover:shadow-md transition-shadow"
                       >
-                        <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <feature.icon className="w-6 h-6 text-primary" />
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <feature.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                         </div>
-                        <div>
-                          <h3 className="text-lg font-bold mb-2">
+                        <div className="min-w-0">
+                          <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2 break-words">
                             {feature.title}
                           </h3>
-                          <p className="text-muted-foreground">
+                          <p className="text-sm sm:text-base text-muted-foreground break-words">
                             {feature.description}
                           </p>
                         </div>

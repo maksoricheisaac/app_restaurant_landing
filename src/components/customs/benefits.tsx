@@ -39,26 +39,26 @@ export const Benefits = () => {
   ];
 
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 sm:py-20">
+      <div className="container mx-auto px-3 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-2">
             Ce Que App_Restaurant Va{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               Changer Pour Vous
             </span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
             Des résultats concrets et mesurables dès les premières semaines. Rejoignez les restaurateurs qui ont transformé leur business.
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}
@@ -67,19 +67,19 @@ export const Benefits = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -8, transition: { duration: 0.2 } }}
-              className="bg-card rounded-xl p-6 border border-border shadow-md hover:shadow-xl transition-all"
+              className="bg-card rounded-xl p-4 sm:p-6 border border-border shadow-md hover:shadow-xl transition-all"
             >
               <div
-                className={`w-14 h-14 ${benefit.bgColor} rounded-lg flex items-center justify-center mb-4`}
+                className={`w-12 h-12 sm:w-14 sm:h-14 ${benefit.bgColor} rounded-lg flex items-center justify-center mb-3 sm:mb-4`}
               >
-                <benefit.icon className={`w-7 h-7 ${benefit.color}`} />
+                <benefit.icon className={`w-6 h-6 sm:w-7 sm:h-7 ${benefit.color}`} />
               </div>
-              <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
-              <p className="text-muted-foreground leading-relaxed mb-3">
+              <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 break-words">{benefit.title}</h3>
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-3 break-words">
                 {benefit.description}
               </p>
-              <div className="inline-flex items-center px-3 py-1 bg-primary/5 rounded-full border border-primary/20">
-                <span className="text-sm font-semibold text-primary">{benefit.stats}</span>
+              <div className="inline-flex items-center px-2 sm:px-3 py-1 bg-primary/5 rounded-full border border-primary/20">
+                <span className="text-xs sm:text-sm font-semibold text-primary break-words">{benefit.stats}</span>
               </div>
             </motion.div>
           ))}

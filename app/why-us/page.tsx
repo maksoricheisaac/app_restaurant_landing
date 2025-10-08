@@ -37,47 +37,47 @@ export default function WhyUs(){
     ]; 
 
     return (
-        <section className="relative py-20 overflow-hidden">
+        <section className="relative py-12 sm:py-20 overflow-hidden">
           {/* Grid Background */}
           <div className="absolute inset-0 -z-10">
             <GridBackground />
           </div>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
+          <div className="container mx-auto px-3 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-primary bg-clip-text text-transparent px-2">
                 Pourquoi Nous Choisir ?
               </h1>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground px-2">
                 6 raisons qui font d&apos;App_Restaurant le meilleur choix pour digitaliser votre restaurant
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16">
               {reasons.map((reason, index) => (
                 <div
                   key={index}
-                  className="bg-card rounded-xl p-8 shadow-elegant border border-border hover:shadow-xl transition-all hover:-translate-y-1"
+                  className="bg-card rounded-xl p-4 sm:p-6 lg:p-8 shadow-elegant border border-border hover:shadow-xl transition-all hover:-translate-y-1"
                 >
-                  <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center mb-4">
-                    <reason.icon className="w-7 h-7 text-primary-foreground" />
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-primary rounded-xl flex items-center justify-center mb-3 sm:mb-4">
+                    <reason.icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary-foreground" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{reason.title}</h3>
-                  <p className="text-muted-foreground">{reason.description}</p>
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 break-words">{reason.title}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground break-words">{reason.description}</p>
                 </div>
               ))}
             </div>
 
             <div className="max-w-4xl mx-auto">
-              <div className="bg-gradient-primary rounded-2xl p-8 md:p-12 text-center">
-                <h2 className="text-3xl font-bold text-primary-foreground mb-4">
+              <div className="bg-gradient-primary rounded-2xl p-6 sm:p-8 md:p-12 text-center">
+                <h2 className="text-2xl sm:text-3xl font-bold text-primary-foreground mb-3 sm:mb-4 px-2">
                   Prêt à digitaliser votre restaurant ?
                 </h2>
-                <p className="text-xl text-primary-foreground/90 mb-8">
+                <p className="text-base sm:text-lg lg:text-xl text-primary-foreground/90 mb-6 sm:mb-8 px-2">
                   Profitez d&apos;une solution développée avec passion et expertise par un développeur local qui comprend vos besoins.
                 </p>
                 <Link
                   href="/#contact"
-                  className="inline-block bg-background text-foreground px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all hover:-translate-y-1"
+                  className="inline-block bg-background text-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:shadow-xl transition-all hover:-translate-y-1 text-sm sm:text-base"
                 >
                   Demander une Démo
                 </Link>
