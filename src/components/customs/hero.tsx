@@ -102,10 +102,6 @@ export const Hero = () => {
               className="grid grid-cols-3 gap-6 mt-12 max-w-md mx-auto lg:mx-0"
             >
               <div className="text-center lg:text-left">
-                <div className="text-3xl font-bold text-primary">50+</div>
-                <div className="text-sm text-muted-foreground">Restaurants</div>
-              </div>
-              <div className="text-center lg:text-left">
                 <div className="text-3xl font-bold text-primary">7j</div>
                 <div className="text-sm text-muted-foreground">Installation</div>
               </div>

@@ -32,7 +32,7 @@ export const FAQ = () => {
     {
       question: "Mon équipe va comprendre comment ça marche ?",
       answer:
-        "Absolument ! On forme votre équipe pendant 6 heures (inclus). En plus : manuel utilisateur simple, 15+ vidéos tutorielles à vie, guide de démarrage rapide. L'interface est si intuitive que même quelqu'un qui n'a jamais utilisé un smartphone peut l'utiliser.",
+        "Absolument ! On forme votre équipe pendant 6 heures (inclus). En plus : manuel utilisateur simple, guide de démarrage rapide. L'interface est si intuitive que même quelqu'un qui n'a jamais utilisé un smartphone peut l'utiliser.",
     },
     {
       question: "Si j'ai un problème, vous m'aidez ?",

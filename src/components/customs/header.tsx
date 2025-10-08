@@ -5,8 +5,11 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter, usePathname } from "next/navigation";
 
 export const Header = () => {
+  const router = useRouter();
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
@@ -61,9 +64,16 @@ export const Header = () => {
   }, [navLinks]);
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: "smooth" });
     setIsMobileMenuOpen(false);
+    
+    // Si on est sur la page d'accueil
+    if (pathname === "/") {
+      const element = document.querySelector(href);
+      element?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Si on est sur une autre page, rediriger vers la page d'accueil avec l'ancre
+      router.push(`/${href}`);
+    }
   };
 
   return (
@@ -79,23 +89,25 @@ export const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
-            className="flex items-center space-x-3"
-          >
-            <Image
-              src="/logo.png"
-              alt="App_Restaurant Logo"
-              width={100}
-              height={100}
-              className="w-10 h-10"
-            />
-            <span className="text-xl lg:text-2xl font-bold text-primary">
-              App_Restaurant
-            </span>
-          </motion.div>
+          <Link href="/" className="flex items-center space-x-3">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2 }}
+              className="flex items-center space-x-3"
+            >
+              <Image
+                src="/logo.png"
+                alt="App_Restaurant Logo"
+                width={50}
+                height={50}
+                className="w-8 h-8"
+              />
+              <span className="text-xl lg:text-2xl font-bold text-primary">
+                App_Restaurant
+              </span>
+            </motion.div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-1">

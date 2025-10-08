@@ -7,7 +7,7 @@ export const Timeline = () => {
     {
       day: "Jour 1-2",
       title: "On Installe Tout Pour Vous",
-      description: "Création compte, ajout de votre menu avec photos, configuration paiements. Vous ne faites rien, on s'occupe de tout.",
+      description: "Création compte, ajout de votre menu avec photos, configuration des tables et code QR. Vous ne faites rien, on s'occupe de tout.",
       icon: Settings,
     },
     {

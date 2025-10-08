@@ -1,5 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Book, FileText, Mail, MessageCircle, Phone, Video } from "lucide-react";
+import { GridBackground } from "@/components/customs/grid-background";
 
 export default function HelpCenter(){
     const resources = [
@@ -47,7 +48,11 @@ export default function HelpCenter(){
     ];
 
     return (
-        <section className="py-20 bg-gradient-subtle">
+        <section className="relative py-20 overflow-hidden">
+          {/* Grid Background */}
+          <div className="absolute inset-0 -z-10">
+            <GridBackground />
+          </div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">

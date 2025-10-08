@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { 
   Smartphone, Users, PieChart, MenuSquare, Sliders, Clock, 
-  History, CreditCard, ClipboardList, Eye, Bell, LayoutGrid, 
+  History, ClipboardList, Eye, Bell, LayoutGrid, 
   MessageSquare, Package, Zap, LayoutDashboard, BarChart3, 
   FileEdit, UserCog, Activity, TrendingUp, Download 
 } from "lucide-react";
@@ -40,12 +40,7 @@ export const Features = () => {
         icon: History,
         title: "Recommander en 1 clic",
         description: "Vos clients fidèles retrouvent leurs plats préférés et recommandent instantanément.",
-      },
-      {
-        icon: CreditCard,
-        title: "Paiement sans galère",
-        description: "Mobile Money, carte, espèces. Vos clients paient comme ils veulent, en toute sécurité.",
-      },
+      }
     ],
     equipe: [
       {

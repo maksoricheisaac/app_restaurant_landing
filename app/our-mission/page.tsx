@@ -1,4 +1,5 @@
 import { Globe, Lightbulb, Rocket, TrendingUp } from "lucide-react";
+import { GridBackground } from "@/components/customs/grid-background";
 
 export default function OurMission(){
     const values = [
@@ -25,7 +26,11 @@ export default function OurMission(){
     ];
 
     return (
-        <section className="py-20 bg-gradient-subtle">
+        <section className="relative py-20 overflow-hidden">
+          {/* Grid Background */}
+          <div className="absolute inset-0 -z-10">
+            <GridBackground />
+          </div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">

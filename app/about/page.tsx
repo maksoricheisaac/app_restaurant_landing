@@ -1,8 +1,12 @@
-import { Award, Heart, Target, Users } from "lucide-react";
+import { GridBackground } from "@/components/customs/grid-background";
 
 export default function About(){
     return (
-        <section className="py-20 bg-gradient-subtle">
+        <section className="relative py-20 overflow-hidden">
+          {/* Grid Background */}
+          <div className="absolute inset-0 -z-10">
+            <GridBackground />
+          </div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
@@ -27,37 +31,6 @@ export default function About(){
                     Avec App_Restaurant, Riche Isaac MAKSO propose une solution complète, intuitive et abordable, spécialement adaptée aux réalités des restaurants en Afrique centrale. Un code propre, maintenable et documenté, avec un engagement total pour votre succès.
                   </p>
                 </div>
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-primary-foreground" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">100+</h3>
-                <p className="text-muted-foreground">Restaurants partenaires</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-primary-foreground" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">5000+</h3>
-                <p className="text-muted-foreground">Commandes traitées</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-primary-foreground" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">98%</h3>
-                <p className="text-muted-foreground">Satisfaction client</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-8 h-8 text-primary-foreground" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">3 pays</h3>
-                <p className="text-muted-foreground">Présence en Afrique</p>
               </div>
             </div>
           </div>

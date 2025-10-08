@@ -20,7 +20,7 @@ export const Pricing = () => {
         "Interface d'administration complète",
         "Tableau de bord avec statistiques en temps réel",
         "Gestion complète du menu et des catégories",
-        "Plan de salle interactif + QR codes (10 tables)",
+        "Gestion de tables & Code QR",
         "Système de caisse intégré",
         "Gestion des stocks avec alertes",
         "Rapports et exports (PDF, Excel)",
@@ -32,7 +32,6 @@ export const Pricing = () => {
         "Personnalisation complète (logo, couleurs)",
         "Intégration de vos photos",
         "Configuration des zones de livraison",
-        "Paramétrage des moyens de paiement",
         "Création des comptes utilisateurs",
         "Tests complets avant lancement",
       ]
