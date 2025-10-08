@@ -61,7 +61,7 @@ export const ProblemSolution = () => {
             <span className="text-primary">Ces Problèmes</span> ?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Chaque jour sans logiciel, c'est de l'argent perdu, des clients insatisfaits et du stress inutile. Il est temps de changer.
+            Chaque jour sans logiciel, c&apos;est de l&apos;argent perdu, des clients insatisfaits et du stress inutile. Il est temps de changer.
           </p>
         </motion.div>
 
@@ -78,7 +78,7 @@ export const ProblemSolution = () => {
               <div className="w-12 h-12 rounded-full bg-destructive/10 flex items-center justify-center">
                 <ClipboardX className="w-6 h-6 text-destructive" />
               </div>
-              <h3 className="text-2xl font-bold text-destructive">Votre Quotidien Aujourd'hui</h3>
+              <h3 className="text-2xl font-bold text-destructive">Votre Quotidien Aujourd&apos;hui</h3>
             </div>
             {comparisons.map((item, index) => {
               const ProblemIcon = item.problemIcon;

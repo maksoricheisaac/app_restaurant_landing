@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
@@ -11,6 +11,14 @@ export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
 
+  const navLinks = useMemo(() => [
+    { name: "Accueil", href: "#hero" },
+    { name: "Fonctionnalités", href: "#features" },
+    { name: "Tarifs", href: "#pricing" },
+    { name: "Témoignages", href: "#testimonials" },
+    { name: "Contact", href: "#contact" },
+  ], []);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -18,14 +26,6 @@ export const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const navLinks = [
-    { name: "Accueil", href: "#hero" },
-    { name: "Fonctionnalités", href: "#features" },
-    { name: "Tarifs", href: "#pricing" },
-    { name: "Témoignages", href: "#testimonials" },
-    { name: "Contact", href: "#contact" },
-  ];
 
   // Détection de la section active
   useEffect(() => {

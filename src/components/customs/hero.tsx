@@ -146,7 +146,7 @@ export const Hero = () => {
                   +35%
                 </div>
                 <div>
-                  <div className="font-semibold">Chiffre d'affaires</div>
+                  <div className="font-semibold">Chiffre d&apos;affaires</div>
                   <div className="text-sm text-muted-foreground">Augmentation moyenne</div>
                 </div>
               </div>

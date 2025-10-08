@@ -90,7 +90,7 @@ export const Pricing = () => {
             <span>OFFRE DE LANCEMENT</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            Investissez 350 000 FCFA Aujourd'hui,{" "}
+            Investissez 350 000 FCFA Aujourd&apos;hui,{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               Gagnez 10x Plus Demain
             </span>
