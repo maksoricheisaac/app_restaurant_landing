@@ -8,7 +8,9 @@ import {
   MessageSquare, Package, Zap, LayoutDashboard, BarChart3, 
   FileEdit, UserCog, Activity, TrendingUp, Download 
 } from "lucide-react";
-import appMobile from "@public/app-mobile.jpg";
+import dashboard from "@public/dashboard.png"
+import iphone from "@public/iphone.png"
+import report from "@public/reports.png"
 import Image from "next/image";
 
 export const Features = () => {
@@ -119,27 +121,27 @@ export const Features = () => {
   };
 
   const tabsData = [
-    { value: "clients", label: "Pour les clients", icon: Smartphone },
-    { value: "equipe", label: "Pour l'équipe", icon: Users },
-    { value: "proprietaire", label: "Pour le propriétaire", icon: PieChart },
+    { value: "clients", label: "Pour les clients", icon: Smartphone, image: iphone },
+    { value: "equipe", label: "Pour l'équipe", icon: Users, image: dashboard },
+    { value: "proprietaire", label: "Pour le propriétaire", icon: PieChart, image: report },
   ];
 
   return (
-    <section id="features" className="py-12 sm:py-20 bg-muted/30">
-      <div className="container mx-auto px-3 sm:px-6 lg:px-8">
+    <section id="features" className="py-16 sm:py-24 lg:py-32 bg-muted/30">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12 sm:mb-16"
+          className="text-center mb-12 sm:mb-16 lg:mb-20"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-2">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 px-2">
             Tout Ce Dont Votre Restaurant a Besoin,{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               En Une Seule Solution
             </span>
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
             Découvrez comment App_Restaurant simplifie chaque aspect de votre activité : des commandes clients à la gestion financière, en passant par votre équipe.
           </p>
         </motion.div>
@@ -147,77 +149,96 @@ export const Features = () => {
         <Tabs
           value={activeTab}
           onValueChange={setActiveTab}
-          className="max-w-6xl mx-auto"
+          className="w-full"
         >
-          <TabsList className="grid grid-cols-1 sm:grid-cols-3 h-auto mb-8 sm:mb-12 bg-background">
+          <TabsList className="grid grid-cols-1 sm:grid-cols-3 h-auto mb-10 sm:mb-14 lg:mb-16 bg-background/50 backdrop-blur-sm p-1 sm:p-1.5 rounded-xl max-w-3xl mx-auto">
             {tabsData.map((tab) => (
               <TabsTrigger
                 key={tab.value}
                 value={tab.value}
-                className="flex items-center justify-center space-x-2 py-3 sm:py-4 px-3 sm:px-6 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-sm sm:text-base"
+                className="flex items-center justify-center gap-2 sm:gap-3 py-3 sm:py-4 px-4 sm:px-6 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg rounded-lg transition-all duration-300 text-sm sm:text-base font-semibold"
               >
                 <tab.icon className="w-4 h-4 sm:w-5 sm:h-5" />
-                <span className="font-medium">{tab.label}</span>
+                <span>{tab.label}</span>
               </TabsTrigger>
             ))}
           </TabsList>
 
           <AnimatePresence mode="wait">
-            {Object.entries(features).map(([key, featureList]) => (
-              <TabsContent key={key} value={key}>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3 }}
-                  className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center"
-                >
-                  {/* Features List */}
-                  <div className="space-y-4 sm:space-y-6">
-                    {featureList.map((feature, index) => (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                        className="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 rounded-lg bg-card border border-border hover:shadow-md transition-shadow"
-                      >
-                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <feature.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-                        </div>
-                        <div className="min-w-0">
-                          <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2 break-words">
-                            {feature.title}
-                          </h3>
-                          <p className="text-sm sm:text-base text-muted-foreground break-words">
-                            {feature.description}
-                          </p>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-
-                  {/* Image */}
+            {Object.entries(features).map(([key, featureList]) => {
+              const currentTab = tabsData.find(tab => tab.value === key);
+              const isClients = key === 'clients';
+              
+              return (
+                <TabsContent key={key} value={key} className="mt-0">
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.2 }}
-                    className="relative"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.4 }}
+                    className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center"
                   >
-                    <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                      <Image
-                        width={100}
-                        height={100}
-                        src={appMobile}
-                        alt="Application mobile de commande en ligne restaurant - Interface client App_Restaurant pour commander au restaurant"
-                        className="w-full h-auto"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent" />
+                    {/* Image - Order changes on mobile for clients tab */}
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 0.2, duration: 0.4 }}
+                      className={`relative ${isClients ? 'lg:order-2' : 'lg:order-1'} order-1 flex items-center justify-center`}
+                    >
+                      <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary/5 to-primary/10 p-4 sm:p-6 lg:p-8 w-full">
+                        <div className="relative aspect-[4/3] w-full flex items-center justify-center">
+                          <Image
+                            src={currentTab?.image || iphone}
+                            alt={`Interface ${key === 'clients' ? 'client' : key === 'equipe' ? 'équipe' : 'propriétaire'} App_Restaurant`}
+                            fill
+                            className="object-contain"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+                            priority={key === activeTab}
+                          />
+                        </div>
+                        {/* Decorative gradient overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent pointer-events-none" />
+                      </div>
+                      
+                      {/* Floating badge */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5 }}
+                        className="absolute -top-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg text-sm font-bold hidden sm:block"
+                      >
+                        {key === 'clients' ? '📱 Mobile' : key === 'equipe' ? '💼 Dashboard' : '📊 Analytics'}
+                      </motion.div>
+                    </motion.div>
+
+                    {/* Features List */}
+                    <div className={`space-y-3 sm:space-y-4 ${isClients ? 'lg:order-1' : 'lg:order-2'} order-2`}>
+                      {featureList.map((feature, index) => (
+                        <motion.div
+                          key={index}
+                          initial={{ opacity: 0, x: isClients ? 20 : -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: index * 0.08, duration: 0.3 }}
+                          className="group flex items-start gap-3 sm:gap-4 p-4 sm:p-5 rounded-xl bg-card/50 backdrop-blur-sm border border-border/50 hover:border-primary/50 hover:shadow-lg hover:bg-card transition-all duration-300"
+                        >
+                          <div className="w-11 h-11 sm:w-14 sm:h-14 bg-gradient-to-br from-primary/20 to-primary/5 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                            <feature.icon className="w-5 h-5 sm:w-7 sm:h-7 text-primary" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <h3 className="text-base sm:text-lg font-bold mb-1.5 sm:mb-2 text-foreground group-hover:text-primary transition-colors">
+                              {feature.title}
+                            </h3>
+                            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                              {feature.description}
+                            </p>
+                          </div>
+                        </motion.div>
+                      ))}
                     </div>
                   </motion.div>
-                </motion.div>
-              </TabsContent>
-            ))}
+                </TabsContent>
+              );
+            })}
           </AnimatePresence>
         </Tabs>
       </div>

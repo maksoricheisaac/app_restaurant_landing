@@ -94,14 +94,14 @@ export const Header = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
-              className="flex items-center space-x-2 sm:space-x-3"
+              className="flex items-center space-x-0 sm:space-x-0"
             >
               <Image
                 src="/logo.png"
                 alt="App_Restaurant Logo"
-                width={50}
-                height={50}
-                className="w-7 h-7 sm:w-8 sm:h-8"
+                width={100}
+                height={100}
+                className="w-12 h-12 sm:w-14 sm:h-14 lg:w-20 lg:h-20"
               />
               <span className="text-base sm:text-xl lg:text-2xl font-bold text-primary truncate max-w-[140px] sm:max-w-none">
                 App_Restaurant
