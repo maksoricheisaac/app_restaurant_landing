@@ -61,7 +61,7 @@ export const Pricing = () => {
     {
       name: "Paiement comptant",
       price: "350 000",
-      bonus: "+1 mois de support offert",
+      bonus: "Sans frais",
     },
     {
       name: "Paiement en 2 fois",
@@ -70,7 +70,7 @@ export const Pricing = () => {
     },
     {
       name: "Paiement en 3 fois",
-      price: "120 000 x 3",
+      price: "116 700 x 3",
       bonus: "Sans frais",
     },
   ];
