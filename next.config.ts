@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     async headers(){
       return [
         {
-          source: '/path*',
+          source: '/:path*',
           headers: [
             {
               key: 'X-Frame-Options',
