@@ -163,7 +163,7 @@ export const Hero = () => {
           <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
             <iframe
               className="absolute top-0 left-0 w-full h-full rounded-lg"
-              src="https://www.youtube.com/watch?v=jRg7c9FKthU"
+              src="https://www.youtube.com/embeb/jRg7c9FKthU"
               title="Logiciel Gestion Restaurant & Commande en Ligne - Démonstration App_Restaurant"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
