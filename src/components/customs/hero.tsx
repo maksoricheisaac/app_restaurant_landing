@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import { ArrowRight, Play} from "lucide-react";
 import heroImage from "@public/hero-restaurant.jpg";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import {
   Dialog,
   DialogContent,
@@ -13,6 +13,8 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { GridBackground } from "@/components/customs/grid-background";
+import VideoComponent from "@/components/customs/video-component";
+import VideoSkeleton from "@/components/customs/video-skeleton";
 
 export const Hero = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -90,7 +92,7 @@ export const Hero = () => {
                 className="cursor-pointer text-sm sm:text-base w-full sm:w-auto"
               >
                 <Play className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
-                Voir la Démo
+                Voir la présentation
               </Button>
             </motion.div>
 
@@ -160,15 +162,9 @@ export const Hero = () => {
               Découvrez notre logiciel de gestion restaurant avec commande en ligne, caisse enregistreuse et menu digital pour restaurants au Congo
             </DialogDescription>
           </DialogHeader>
-          <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-            <iframe
-              className="absolute top-0 left-0 w-full h-full rounded-lg"
-              src="https://www.youtube.com/embed/JG1TcUROLDE?si=t1uJjSws7kpJPHQ-"
-              title="Logiciel Gestion Restaurant & Commande en Ligne - Démonstration App_Restaurant"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
-          </div>
+          <Suspense fallback={<VideoSkeleton />}>
+            <VideoComponent />
+          </Suspense>
         </DialogContent>
       </Dialog>
     </section>

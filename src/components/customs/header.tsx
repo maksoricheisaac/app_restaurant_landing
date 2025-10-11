@@ -86,10 +86,10 @@ export const Header = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+      <div className="container mx-auto px-2 sm:px-4 lg:px-8">
+        <div className="flex items-center justify-between h-16 lg:h-20 gap-2">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+          <Link href="/" className="flex items-center space-x-1 sm:space-x-2 flex-shrink-0 min-w-0">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -101,9 +101,9 @@ export const Header = () => {
                 alt="App_Restaurant Logo"
                 width={100}
                 height={100}
-                className="w-12 h-12 sm:w-14 sm:h-14 lg:w-20 lg:h-20"
+                className="w-8 h-8 sm:w-12 sm:h-12 lg:w-20 lg:h-20 flex-shrink-0"
               />
-              <span className="text-base sm:text-xl lg:text-2xl font-bold text-primary truncate max-w-[140px] sm:max-w-none">
+              <span className="text-sm sm:text-lg lg:text-2xl font-bold text-primary truncate max-w-[120px] sm:max-w-none">
                 App_Restaurant
               </span>
             </motion.div>
@@ -148,7 +148,7 @@ export const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-md hover:bg-muted transition-colors flex-shrink-0"
+            className="lg:hidden p-1.5 sm:p-2 rounded-md hover:bg-muted transition-colors flex-shrink-0"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (

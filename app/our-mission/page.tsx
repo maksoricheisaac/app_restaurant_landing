@@ -1,5 +1,19 @@
 import { Globe, Lightbulb, Rocket, TrendingUp } from "lucide-react";
 import { GridBackground } from "@/components/customs/grid-background";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Notre Mission - App_Restaurant | Digitaliser la Restauration en Afrique",
+  description: "Notre mission : digitaliser et moderniser la restauration en Afrique. Découvrez nos valeurs de transparence, qualité, engagement et innovation. Transformer les idées des restaurateurs africains en plateformes digitales performantes avec React, Next.js et Tailwind CSS.",
+  openGraph: {
+    title: "Notre Mission - App_Restaurant | Digitaliser la Restauration en Afrique",
+    description: "Notre mission : digitaliser et moderniser la restauration en Afrique avec transparence, qualité, engagement et innovation. Transformer les idées en plateformes digitales performantes.",
+    url: "https://app-restaurant-landing.com/our-mission",
+  },
+  alternates: {
+    canonical: "https://app-restaurant-landing.com/our-mission",
+  },
+};
 
 export default function OurMission(){
     const values = [

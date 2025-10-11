@@ -1,4 +1,18 @@
 import { GridBackground } from "@/components/customs/grid-background";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "À propos - App_Restaurant | Développeur Full-Stack Riche Isaac MAKSO",
+  description: "Découvrez l'histoire d'App_Restaurant, créée par Riche Isaac MAKSO, développeur web full-stack passionné basé à Brazzaville. Diplômé en informatique de l'E.C.E.S, spécialisé en React, Next.js et Tailwind CSS pour digitaliser les restaurants africains.",
+  openGraph: {
+    title: "À propos - App_Restaurant | Développeur Full-Stack Riche Isaac MAKSO",
+    description: "Découvrez l'histoire d'App_Restaurant, créée par Riche Isaac MAKSO, développeur web full-stack passionné basé à Brazzaville, spécialisé en React, Next.js et Tailwind CSS.",
+    url: "https://app-restaurant-landing.com/about",
+  },
+  alternates: {
+    canonical: "https://app-restaurant-landing.com/about",
+  },
+};
 
 export default function About(){
     return (

@@ -1,6 +1,20 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Book, FileText, Mail, MessageCircle, Phone, Video } from "lucide-react";
 import { GridBackground } from "@/components/customs/grid-background";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Centre d'Aide - App_Restaurant | FAQ & Support 24/7",
+  description: "Trouvez rapidement des réponses à vos questions sur App_Restaurant. FAQ, guides de démarrage, vidéos tutorielles et support client disponible par email, téléphone et WhatsApp. Assistance 24/7 pour votre logiciel de gestion restaurant.",
+  openGraph: {
+    title: "Centre d'Aide - App_Restaurant | FAQ & Support 24/7",
+    description: "Trouvez rapidement des réponses à vos questions sur App_Restaurant. FAQ, guides, vidéos tutorielles et support client disponible 24/7 par email, téléphone et WhatsApp.",
+    url: "https://app-restaurant-landing.com/help-center",
+  },
+  alternates: {
+    canonical: "https://app-restaurant-landing.com/help-center",
+  },
+};
 
 export default function HelpCenter(){
     const resources = [

@@ -1,5 +1,19 @@
 import { BarChart, Book, Settings, ShoppingCart, Smartphone, Users } from "lucide-react";
 import { GridBackground } from "@/components/customs/grid-background";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Documentation - App_Restaurant | Guide Complet d'Utilisation du Logiciel",
+  description: "Documentation complète d'App_Restaurant : guides de démarrage, gestion des commandes, configuration, statistiques, gestion d'équipe et application mobile. Tutoriels vidéo et guides étape par étape pour maîtriser votre logiciel de gestion restaurant.",
+  openGraph: {
+    title: "Documentation - App_Restaurant | Guide Complet d'Utilisation du Logiciel",
+    description: "Documentation complète d'App_Restaurant : guides de démarrage, gestion des commandes, configuration, statistiques et tutoriels vidéo pour maîtriser votre logiciel de gestion restaurant.",
+    url: "https://app-restaurant-landing.com/documentation",
+  },
+  alternates: {
+    canonical: "https://app-restaurant-landing.com/documentation",
+  },
+};
 
 export default function Documentation(){
     const sections = [

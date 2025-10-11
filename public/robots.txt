@@ -5,7 +5,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://app-restaurant.com/sitemap.xml
+Sitemap: https://app-restaurant-landing.com/sitemap.xml
 
 # Crawl-delay optimisé pour un meilleur indexation
 Crawl-delay: 5

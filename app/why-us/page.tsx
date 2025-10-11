@@ -1,6 +1,20 @@
 import { DollarSign, HeadphonesIcon, Shield, Smartphone, Users, Zap } from "lucide-react";
 import Link from "next/link";
 import { GridBackground } from "@/components/customs/grid-background";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Pourquoi Nous Choisir - App_Restaurant | 6 Raisons de Digitaliser avec Nous",
+  description: "Découvrez 6 raisons de choisir App_Restaurant : développeur expérimenté, code de qualité professionnelle, transparence totale, centré sur l'utilisateur, technologies modernes (Next.js 15, React 19, Tailwind CSS 4) et engagement total. Le meilleur choix pour digitaliser votre restaurant.",
+  openGraph: {
+    title: "Pourquoi Nous Choisir - App_Restaurant | 6 Raisons de Digitaliser avec Nous",
+    description: "6 raisons de choisir App_Restaurant : développeur expérimenté, code de qualité, transparence, technologies modernes et engagement total pour digitaliser votre restaurant.",
+    url: "https://app-restaurant-landing.com/why-us",
+  },
+  alternates: {
+    canonical: "https://app-restaurant-landing.com/why-us",
+  },
+};
 
 export default function WhyUs(){
     const reasons = [

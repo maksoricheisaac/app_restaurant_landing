@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/customs/header";
 import { Footer } from "@/components/customs/footer";
+import { OrganizationStructuredData } from "@/components/customs/structured-data";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -62,7 +63,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "https://app-restaurant.com",
+    url: "https://app-restaurant-landing.com",
     siteName: "App_Restaurant - Logiciel Gestion Restaurant Congo",
     title: "Logiciel de Gestion Restaurant & Commande en Ligne | Congo Brazzaville",
     description: "Logiciel complet pour gérer votre restaurant : commande en ligne, caisse enregistreuse, gestion stocks, menu QR code, livraison. Solution congolaise adaptée aux restaurants africains. 350 000 FCFA sans abonnement mensuel.",
@@ -83,8 +84,12 @@ export const metadata: Metadata = {
     creator: "@richemakso",
   },
   alternates: {
-    canonical: "https://app-restaurant.com",
+    canonical: "https://app-restaurant-landing.com",
   },
+  verification: {
+    google: "your-google-verification-code",
+  },
+  metadataBase: new URL("https://app-restaurant-landing.com"),
   category: "technology",
 };
 
@@ -123,7 +128,7 @@ export default function RootLayout({
       "name": "Riche Isaac MAKSO",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://app-restaurant.com/logo.png"
+        "url": "https://app-restaurant-landing.com/logo.png"
       }
     },
     "description": "Logiciel de gestion restaurant complet pour digitaliser votre établissement au Congo et en Afrique. Commande en ligne, caisse enregistreuse, gestion des stocks, menu digital avec QR code, livraison à domicile. Solution adaptée aux restaurants, maquis, nganda, fast-food africains.",
@@ -140,7 +145,7 @@ export default function RootLayout({
       "Rapports et exports comptables",
       "Paiement mobile money (Airtel, MTN)"
     ],
-    "screenshot": "https://app-restaurant.com/hero-restaurant.jpg",
+    "screenshot": "https://app-restaurant-landing.com/hero-restaurant.jpg",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
@@ -160,10 +165,14 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <OrganizationStructuredData />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
