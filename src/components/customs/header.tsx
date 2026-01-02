@@ -134,12 +134,13 @@ export const Header = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
-            className="hidden lg:block"
+            className="hidden lg:block cursor-pointer"
           >
             <Button
               variant="cta"
               size="lg"
               onClick={() => scrollToSection("#contact")}
+              className="cursor-pointer"
             >
               Demander une Démo
             </Button>

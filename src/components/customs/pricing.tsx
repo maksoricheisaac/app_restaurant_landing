@@ -229,7 +229,7 @@ export const Pricing = () => {
           <Button
             variant="hero"
             size="lg"
-            className="mt-6"
+            className="mt-6 cursor-pointer"
             onClick={() => scrollToSection("#contact")}
           >
             Je Réserve Ma Place

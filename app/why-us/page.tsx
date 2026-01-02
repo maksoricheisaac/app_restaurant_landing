@@ -91,7 +91,7 @@ export default function WhyUs(){
                 </p>
                 <Link
                   href="/#contact"
-                  className="inline-block bg-background text-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:shadow-xl transition-all hover:-translate-y-1 text-sm sm:text-base"
+                  className="inline-block bg-background text-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:shadow-xl transition-all hover:-translate-y-1 text-sm sm:text-base cursor-pointer"
                 >
                   Demander une Démo
                 </Link>
